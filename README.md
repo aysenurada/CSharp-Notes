@@ -3,6 +3,7 @@
 #### Değişkenler
 
 **`var` keyword**
+
 Bir değişkenin veri türünü açıkça belirtmeden, derleyicinin değişkenin tipini otomatik olarak çıkarmasını sağlayan bir özelliktir.
 Bu, genellikle değişkenin tipini belirlemenin açık bir şekilde belirtilmesi gerekmeyen durumlarda kodun daha kısa ve okunabilir olmasını sağlar.
 ```C#
@@ -19,6 +20,7 @@ Bu özellik, özellikle LINQ sorguları gibi durumlarda, değişken türlerini k
 
 ---
 #### Data Types
+
 **Value Types:**
 - Tam sayı:                 byte, short, int, long
 - Ondalıklı sayı:         float, double, decimal
@@ -45,6 +47,7 @@ string cinsiyet = "Erkek";
 
 
 **Data Type Conversion**
+
 *Veri tipi dönüşümüne neden ihtiyaç duyulur?*
 ```C#
 // Console.Write() ekrana yazdırır ve aynı satırda kalır
@@ -85,6 +88,7 @@ Boyut olarak büyük veri tipindeki bir değeri küçük veri tipine dönüştü
 
 
 **Nullable Types**
+
 - Value type'larda mutlaka bir değer ataması yapılmalıdır. Reference type'lar için böyle bir zorunluluk yoktur.
 
 ```C#
@@ -116,14 +120,15 @@ Console.WriteLine(yas.GetValueOrDefault);
 // 0 dondürür
 ```
 
-Referance type'ların default değeri `null`,
-int (short, long vs. dahil) ve float'ın (double, decimal dahil) default değeri `0`,
-bool veri tipinin `false`,
-char veri tipinin default değeri `\0` yani boşluk karakteri
-struct veri tipinin default değeri `null`
+- Referance type'ların default değeri `null`,
+- int (short, long vs. dahil) ve float'ın (double, decimal dahil) default değeri `0`,
+- bool veri tipinin `false`,
+- char veri tipinin default değeri `\0` yani boşluk karakteri
+- struct veri tipinin default değeri `null`
 
 
 **string**
+
 - String değişkenleri tek bir string değişkende birleştirmeye **string concat** denir.
 ```C#
 string ad = "Ahmet";
@@ -145,6 +150,7 @@ string mesaj = $"{ad} {soyad} isimli kişi {yas} yaşındadır.";
 ```
 
 **string Metotları**
+
 ```C#
 string mesaj = "Ahmet Turan isimli kişi 20 yaşındadır."
 
@@ -176,6 +182,7 @@ var sonuc = mesaj.Replace("Ahmet", "Ayşe");  // Ahmet yerine Ayşe yazar
 ```
 
 #### DateTime
+
 ```C#
 // DateTime türünde bir değişken
 DateTime simdi = Datatime.Now;
@@ -193,6 +200,7 @@ DateTime dt = new DateTime(2022, 6, 10, 14, 30, 45);
 ---
 
 #### Diziler
+
 Diziler ikiye ayrılabilir:
 - Tek Boyutlu Diziler
 - Çok Boyutlu Diziler
@@ -221,6 +229,7 @@ int[,] sayilar = {{1, 2, 3}, {4, 5, 6}};
 ```
 
 **Dizi Metotları**
+
 ```C#
 string[] sehirler = {"İstanbul", "Rize", "Kocaeli"};
 
@@ -245,6 +254,7 @@ Array.Clear(sehirler, 0, 1);   // 0.index'ten 1.index'e kadar siler
 ```
 
 **Array Slicing**
+
 ```C#
 string[] sehirler = {"Zonguldak", "Sivas", "Samsun", "Ankara"};
 
@@ -255,6 +265,7 @@ var sonuc = sehirler[..2];   // başlangıçtan 2.index'e kadar alır, 2.index d
 
 
 **?? Operatörü**
+
 ```C#
 string ad = new string[2];
 Console.WriteLine("İsim: ");
@@ -268,6 +279,7 @@ Kullanıcıdan alınan verinin null değer olup olmadığını kontrol eder `??`
 #### Operatörler
 
 **++ Operatörü**
+
 ```C#
 int a = 2;
 int b = a++;
@@ -277,6 +289,7 @@ int b = ++a;
 ```
 
 **Math Sınıfı**
+
 ```C#
 double sonuc;
 
@@ -300,6 +313,7 @@ sonuc = Math.Min(10,20);   // 10
 ```
 
 **Random Sınıfı**
+
 ```C#
 // Random sınıfı instance class'tır. Nesne oluşturulmadan kullanılamaz.
 Random rnd = new Random();
@@ -322,6 +336,7 @@ Global scope aralığında tanımlanan bir değişken, yerel scope'da tanımlana
 Global scope'da tanımlanan bir değişken, global scope dışında tekrar tanımlanabilir.
 
 **?: Ternary Operatörü**
+
 ```C#
 int a = 10, b = 20;
 
@@ -496,6 +511,7 @@ foreach(var file in files) {
 #### Object Orianted Programming
 
 **Program Class**
+
 .Net 6 versiyonundan önce Consol şablonu aşağıdaki gibiydi.
 ```C#
 using System;
