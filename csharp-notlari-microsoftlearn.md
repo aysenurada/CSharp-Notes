@@ -1,3 +1,4 @@
+# C# Notları - Microsoft Learn
 - .NET Runtime'ın en son sürümü, tür adını tekrarlamak zorunda kalmadan bir nesneyi örneklemenize olanak tanır (target-typed constructor invocation). Amaç, kodun okunabilirliğini basitleştirmektir. Hedef tipli `new` ifadesi yazarken her zaman parantez kullanırsınız.  Örneğin, aşağıdaki kod `Random` sınıfının yeni bir örneğini oluşturacaktır:
 ```C#
 Random dice = new();
