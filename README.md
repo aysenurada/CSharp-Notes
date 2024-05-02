@@ -1,8 +1,8 @@
 # CSharp-Notes
 
-#### ==Değişkenler==
+#### Değişkenler
 
-**`var` ==keyword==**
+**`var` keyword**
 Bir değişkenin veri türünü açıkça belirtmeden, derleyicinin değişkenin tipini otomatik olarak çıkarmasını sağlayan bir özelliktir.
 Bu, genellikle değişkenin tipini belirlemenin açık bir şekilde belirtilmesi gerekmeyen durumlarda kodun daha kısa ve okunabilir olmasını sağlar.
 ```C#
@@ -18,7 +18,7 @@ var yas = 25;         // yas değişkeninin tipi otomatik olarak int olarak beli
 Bu özellik, özellikle LINQ sorguları gibi durumlarda, değişken türlerini kısa ve okunabilir tutmak için sıkça kullanılır.
 
 ---
-#### ==Data Types==
+#### Data Types
 **Value Types:**
 - Tam sayı:                 byte, short, int, long
 - Ondalıklı sayı:         float, double, decimal
@@ -44,7 +44,7 @@ string cinsiyet = "Erkek";
 ![[Pasted image 20240220110110.png]]
 
 
-==**Data Type Conversion**==
+**Data Type Conversion**
 *Veri tipi dönüşümüne neden ihtiyaç duyulur?*
 ```C#
 // Console.Write() ekrana yazdırır ve aynı satırda kalır
@@ -84,7 +84,7 @@ float g = (float)f;
 Boyut olarak büyük veri tipindeki bir değeri küçük veri tipine dönüştürmeye kalkışıldığında hata alınır. Çünkü veri kaybı olacaktır. Tam tersi olduğunda dönüştürme işlemi yapılabilir.
 
 
-==**Nullable Types**==
+**Nullable Types**
 - Value type'larda mutlaka bir değer ataması yapılmalıdır. Reference type'lar için böyle bir zorunluluk yoktur.
 
 ```C#
@@ -123,7 +123,7 @@ char veri tipinin default değeri `\0` yani boşluk karakteri
 struct veri tipinin default değeri `null`
 
 
-==**string**==
+**string**
 - String değişkenleri tek bir string değişkende birleştirmeye **string concat** denir.
 ```C#
 string ad = "Ahmet";
@@ -175,7 +175,7 @@ var sonuc = mesaj.Substring(6, 5);  // 6.indexten başlayıp 5 karakter alır ve
 var sonuc = mesaj.Replace("Ahmet", "Ayşe");  // Ahmet yerine Ayşe yazar
 ```
 
-#### ==DateTime==
+#### DateTime
 ```C#
 // DateTime türünde bir değişken
 DateTime simdi = Datatime.Now;
@@ -192,7 +192,7 @@ DateTime dt = new DateTime(2022, 6, 10, 14, 30, 45);
 
 ---
 
-#### ==Diziler==
+#### Diziler
 Diziler ikiye ayrılabilir:
 - Tek Boyutlu Diziler
 - Çok Boyutlu Diziler
@@ -265,7 +265,7 @@ Kullanıcıdan alınan verinin null değer olup olmadığını kontrol eder `??`
 
 ---
 
-#### ==Operatörler==
+#### Operatörler
 
 **++ Operatörü**
 ```C#
@@ -312,7 +312,7 @@ rnd.Next(60, 100);  // 60 ve 100 arasında sayı üretir, 60 dahil, 100 dahil de
 
 ---
 
-#### ==Koşullu Bloklar==
+#### Koşullu Bloklar
 
 **Kod Blokları**
 - Her blok kendi kapsamını tanımlar.
@@ -330,7 +330,7 @@ var sonuc = (a > b) ? "a büyük" : (a == b) ? "a ve b eşit" : "b büyük";
 
 ---
 
-#### ==Döngüler==
+#### Döngüler
 
 **foreach Döngüsü**
 - Diziler için kullanılır.
@@ -344,7 +344,7 @@ foreach(var i in ad) {
 
 ---
 
-#### ==Dosya Yönetimi==
+#### Dosya Yönetimi
 
 **Dosya Okuma**
 - Bir .txt uzantılı dosya olsun.
@@ -493,7 +493,7 @@ foreach(var file in files) {
 
 ---
 
-#### ==Object Orianted Programming==
+#### Object Orianted Programming
 
 **Program Class**
 .Net 6 versiyonundan önce Consol şablonu aşağıdaki gibiydi.
@@ -576,7 +576,7 @@ class Ogrenci
 
 ---
 
-#### ==Collections==
+#### Collections
 
 - Dizileri kullanma amacıyla aynıdır.
 - non-generic collections -> tip tanımlamasına bağlı değildir.
@@ -645,7 +645,7 @@ Dictionary<int, string> sayilar = new Dictionary<int, string>()
 
 ---
 
-#### ==Exception Handling - Hata Yönetimi==
+#### Exception Handling - Hata Yönetimi
 
 ```C#
 try {
