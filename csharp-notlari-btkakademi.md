@@ -1,4 +1,4 @@
-# CSharp Notları - Btk Akademi
+# CSharp Notları - BTK Akademi
 
 #### Değişkenler
 
