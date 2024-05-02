@@ -145,7 +145,8 @@ string mesaj = $"{ad} {soyad} isimli kişi {yas} yaşındadır.";
 
 - `@` işareti ile string'ler içerdikleri karakterler ve boşluklar ile olduğu gibi korunabilir.
 ```C#
-
+string filePath = @"C:\Users\UserName\Documents\file.txt";
+Console.WriteLine(filePath);
 ```
 
 **string Metotları**
