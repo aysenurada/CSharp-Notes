@@ -43,8 +43,6 @@ bool acikKapali = true;
 string cinsiyet = "Erkek";
 ```
 
-![[Pasted image 20240220110110.png]]
-
 
 **Data Type Conversion**
 
@@ -64,6 +62,7 @@ sayi1 = int.Parse(sayi1);   // Convert.ToInt32() ile aynıdır
 // tekrar string'e dönüştürmek istersek ToString() metodu kullanılır
 sayi1 = sayi1.ToString();
 ```
+
 
 Veri tipi dönüşümü iki türde ele alınabilir:
 - **implicit casting** - bilinçsiz tür dönüşümü
@@ -87,10 +86,10 @@ float g = (float)f;
 Boyut olarak büyük veri tipindeki bir değeri küçük veri tipine dönüştürmeye kalkışıldığında hata alınır. Çünkü veri kaybı olacaktır. Tam tersi olduğunda dönüştürme işlemi yapılabilir.
 
 
+
 **Nullable Types**
 
 - Value type'larda mutlaka bir değer ataması yapılmalıdır. Reference type'lar için böyle bir zorunluluk yoktur.
-
 ```C#
 // reference type için null ataması
 string isim = null;
@@ -120,6 +119,7 @@ Console.WriteLine(yas.GetValueOrDefault);
 // 0 dondürür
 ```
 
+
 - Referance type'ların default değeri `null`,
 - int (short, long vs. dahil) ve float'ın (double, decimal dahil) default değeri `0`,
 - bool veri tipinin `false`,
@@ -128,7 +128,6 @@ Console.WriteLine(yas.GetValueOrDefault);
 
 
 **string**
-
 - String değişkenleri tek bir string değişkende birleştirmeye **string concat** denir.
 ```C#
 string ad = "Ahmet";
@@ -150,7 +149,6 @@ string mesaj = $"{ad} {soyad} isimli kişi {yas} yaşındadır.";
 ```
 
 **string Metotları**
-
 ```C#
 string mesaj = "Ahmet Turan isimli kişi 20 yaşındadır."
 
@@ -182,7 +180,6 @@ var sonuc = mesaj.Replace("Ahmet", "Ayşe");  // Ahmet yerine Ayşe yazar
 ```
 
 #### DateTime
-
 ```C#
 // DateTime türünde bir değişken
 DateTime simdi = Datatime.Now;
@@ -204,7 +201,7 @@ DateTime dt = new DateTime(2022, 6, 10, 14, 30, 45);
 Diziler ikiye ayrılabilir:
 - Tek Boyutlu Diziler
 - Çok Boyutlu Diziler
-
+- 
 ```C#
 // Tek Boyutlu Dizi
 string[] adlar = new string[3];
@@ -229,7 +226,6 @@ int[,] sayilar = {{1, 2, 3}, {4, 5, 6}};
 ```
 
 **Dizi Metotları**
-
 ```C#
 string[] sehirler = {"İstanbul", "Rize", "Kocaeli"};
 
@@ -254,7 +250,6 @@ Array.Clear(sehirler, 0, 1);   // 0.index'ten 1.index'e kadar siler
 ```
 
 **Array Slicing**
-
 ```C#
 string[] sehirler = {"Zonguldak", "Sivas", "Samsun", "Ankara"};
 
@@ -265,7 +260,6 @@ var sonuc = sehirler[..2];   // başlangıçtan 2.index'e kadar alır, 2.index d
 
 
 **?? Operatörü**
-
 ```C#
 string ad = new string[2];
 Console.WriteLine("İsim: ");
@@ -279,7 +273,6 @@ Kullanıcıdan alınan verinin null değer olup olmadığını kontrol eder `??`
 #### Operatörler
 
 **++ Operatörü**
-
 ```C#
 int a = 2;
 int b = a++;
@@ -289,7 +282,6 @@ int b = ++a;
 ```
 
 **Math Sınıfı**
-
 ```C#
 double sonuc;
 
@@ -313,7 +305,6 @@ sonuc = Math.Min(10,20);   // 10
 ```
 
 **Random Sınıfı**
-
 ```C#
 // Random sınıfı instance class'tır. Nesne oluşturulmadan kullanılamaz.
 Random rnd = new Random();
@@ -335,8 +326,8 @@ rnd.Next(60, 100);  // 60 ve 100 arasında sayı üretir, 60 dahil, 100 dahil de
 Global scope aralığında tanımlanan bir değişken, yerel scope'da tanımlanamaz.
 Global scope'da tanımlanan bir değişken, global scope dışında tekrar tanımlanabilir.
 
-**?: Ternary Operatörü**
 
+**?: Ternary Operatörü**
 ```C#
 int a = 10, b = 20;
 
@@ -388,6 +379,7 @@ Console.WriteLine(sonuc[1]);
 ```
 
 
+
 **Dosyaya Yazma ve Ekleme**
 - `CreateText()` metodu dosyayı yazma modunda açar. İçerisinde veri var ise yeni yazılan veriler, var olan verilerin üzerine yazılır, yani eski veriler kaybedilir.
 ```C#
@@ -429,6 +421,7 @@ File.AppendAllText("dosya_yolu", "merhaba");
 ```
 
 
+
 **Klasörlerle Çalışma**
 - `CreateDirectory()` metodunda parametre olarak yol belirtmeyip direkt oluşturulacak klasörün adı yazılırsa proje klasörünün altında belirtilen klasörü oluşturur.
 ```C#
@@ -461,6 +454,7 @@ string path = Directory.GetCurrentDirectory();
 ```
 
 
+
 **Belirli Bir Yoldaki Dosya ve Klasörlerle Çalışma**
 - `GetDirectories()` metodu parametre olarak verilen dizindeki tüm klasörleri getirir ve bunları dizi şeklinde döndürür.
 - `"*"` parametresi arama kriteridir ve tüm klasörleri getirmesini söyler.
@@ -478,6 +472,7 @@ foreach(var dir in dirs) {
 }
 ```
 
+
 - `GetFiles()` metodu parametre olarak verilen dizindeki tüm dosyaları getirir ve bunları dizi şeklinde döndürür.
 - `"*"` parametresi arama kriteridir ve tüm dosyaları getirmesini söyler.
 - `"*.txt"` parametresi arama kriteridir ve .txt uzantılı tüm dosyaları getirir.
@@ -489,6 +484,7 @@ foreach(var file in files) {
 	Console.WriteLine(file);
 }
 ```
+
 
 - Ulaşılan dosyalar üzerinde işlemlar yapılabilir.
 - `Path` sınıfı static bir sınıftır ve nesne oluşturulmadan metotlara erişilebilir.
@@ -575,6 +571,7 @@ namespace ConsoleApp
 }
 ```
 
+
 **Constructors**
 - Class ismi ile aynı olur.
 - Her nesne için otomatik olarak çalıştırılır.
@@ -593,7 +590,6 @@ class Ogrenci
 ---
 
 #### Collections
-
 - Dizileri kullanma amacıyla aynıdır.
 - non-generic collections -> tip tanımlamasına bağlı değildir.
 - generic -> tipe bağımlıdır.
@@ -620,6 +616,7 @@ liste.RemoveAt(2);
 ```
 
 
+
 **Generic List**
 - Tip bağımlıdır.
 ```C#
@@ -632,6 +629,7 @@ sayilar.Add(20);
 ```C#
 List<string> isimler = new List<string>() {"Ahmet", "Aynur"};
 ```
+
 
 
 **Dictionary**
@@ -662,7 +660,6 @@ Dictionary<int, string> sayilar = new Dictionary<int, string>()
 ---
 
 #### Exception Handling - Hata Yönetimi
-
 ```C#
 try {
 	// hatalar
