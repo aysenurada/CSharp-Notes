@@ -1,2 +1,2 @@
 # C# Notlarım
-C# dilini öğrenirken aldığım notların yer aldığı repo
+C# dilini öğrenirken aldığım notlar
